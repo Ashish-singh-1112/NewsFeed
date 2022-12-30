@@ -79,13 +79,8 @@ export class News extends Component {
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.state.totalResults}
-          loader={!this.state.loading && <Spinner />}
-          endMessage={
-            <p style={{ textAlign: "center" }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
-        >
+          loader={<Spinner />} 
+          >
           <div className="container">
             <div className="row" >
               {this.state.articles.map((element) => {
